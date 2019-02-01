@@ -1,0 +1,270 @@
+﻿1
+00:00:06,443 --> 00:00:09,996
+- Hi and welcome to Ultimate
+Go Programming LiveLessons.
+
+2
+00:00:09,996 --> 00:00:13,406
+My name is William Kennedy
+and I am the author
+
+3
+00:00:13,406 --> 00:00:17,379
+of the, Go in Action, book
+and the blog goinggo.net.
+
+4
+00:00:17,379 --> 00:00:21,048
+I also am the managing
+partner of Ardan Labs
+
+5
+00:00:21,048 --> 00:00:25,215
+and Ardan Studios where we work
+on Go projects all the time.
+
+6
+00:00:27,259 --> 00:00:30,962
+This video class is based
+on the physical classes
+
+7
+00:00:30,962 --> 00:00:34,659
+that I teach week in and week
+out throughout the world.
+
+8
+00:00:34,659 --> 00:00:37,377
+I do a lot of free classes on weekends
+
+9
+00:00:37,377 --> 00:00:40,401
+but we do a lot of corporate
+three and four day classes,
+
+10
+00:00:40,401 --> 00:00:42,911
+and I finally felt now is the time that
+
+11
+00:00:42,911 --> 00:00:45,177
+this material was in a particular place
+
+12
+00:00:45,177 --> 00:00:47,988
+where I could deliver to you over video,
+
+13
+00:00:47,988 --> 00:00:49,783
+and this is where we're at now.
+
+14
+00:00:49,783 --> 00:00:52,091
+And I really hope you enjoy this course.
+
+15
+00:00:52,091 --> 00:00:55,746
+And really, at the end what
+I want is that you can love
+
+16
+00:00:55,746 --> 00:00:58,736
+and appreciate Go as much as I do.
+
+17
+00:00:58,736 --> 00:01:03,133
+I have taken four years of
+writing and thinking about Go
+
+18
+00:01:03,133 --> 00:01:06,036
+and been able to put it
+together in this class.
+
+19
+00:01:06,036 --> 00:01:06,962
+So in this class,
+
+20
+00:01:06,962 --> 00:01:08,747
+what we're gonna be
+covering is three things.
+
+21
+00:01:08,747 --> 00:01:11,618
+It's three things that I
+think are incredibly important
+
+22
+00:01:11,618 --> 00:01:12,832
+to learning anything.
+
+23
+00:01:12,832 --> 00:01:16,352
+History, mechanics and then design.
+
+24
+00:01:16,352 --> 00:01:17,841
+So I'm gonna give you
+a little bit of history
+
+25
+00:01:17,841 --> 00:01:21,353
+throughout this course
+about where these idioms,
+
+26
+00:01:21,353 --> 00:01:22,976
+where these things are coming from.
+
+27
+00:01:22,976 --> 00:01:25,593
+Then I'm gonna be
+sharing you the mechanics
+
+28
+00:01:25,593 --> 00:01:27,781
+of how things work inside and out,
+
+29
+00:01:27,781 --> 00:01:30,520
+and finally we get to talk about design,
+
+30
+00:01:30,520 --> 00:01:33,662
+and how to leverage
+all of this information
+
+31
+00:01:33,662 --> 00:01:37,412
+to do things in a
+productive and correct way.
+
+32
+00:01:38,256 --> 00:01:39,544
+So, from the language mechanics
+
+33
+00:01:39,544 --> 00:01:42,456
+we'll get into type and data structures.
+
+34
+00:01:42,456 --> 00:01:44,588
+We're gonna learn how this language works.
+
+35
+00:01:44,588 --> 00:01:47,823
+Then from a software design
+we're gonna focus on decoupling
+
+36
+00:01:47,823 --> 00:01:51,144
+and composition and error
+handling and packaging
+
+37
+00:01:51,144 --> 00:01:53,354
+and how we can think about architecturing
+
+38
+00:01:53,354 --> 00:01:55,166
+and designing software.
+
+39
+00:01:55,166 --> 00:01:56,514
+And finally of course you're gonna
+
+40
+00:01:56,514 --> 00:01:57,964
+want that concurrency stuff,
+
+41
+00:01:57,964 --> 00:02:00,637
+Goroutines, data races,
+channels, patterns,
+
+42
+00:02:00,637 --> 00:02:04,627
+ways to think about writing
+multithreaded software in Go,
+
+43
+00:02:04,627 --> 00:02:06,099
+and once all that's done
+
+44
+00:02:06,099 --> 00:02:08,583
+and you have that strong foundation,
+
+45
+00:02:08,583 --> 00:02:10,954
+we'll talk about testing
+and really cool things
+
+46
+00:02:10,954 --> 00:02:13,132
+around how you can profile that code,
+
+47
+00:02:13,132 --> 00:02:15,843
+but I always want us to be focusing on
+
+48
+00:02:15,843 --> 00:02:18,013
+optimizing for correctness first.
+
+49
+00:02:18,013 --> 00:02:22,134
+This is gonna be a very big
+theme throughout this class.
+
+50
+00:02:22,134 --> 00:02:26,899
+So I am so excited that I
+finally get to share this class
+
+51
+00:02:26,899 --> 00:02:30,174
+almost in its entirety with you,
+
+52
+00:02:30,174 --> 00:02:32,726
+and you don't have to
+worry about not being able
+
+53
+00:02:32,726 --> 00:02:34,866
+to have that corporate
+classroom environment.
+
+54
+00:02:34,866 --> 00:02:36,271
+I've tried to deliver
+
+55
+00:02:36,271 --> 00:02:39,447
+that corporate classroom
+environment to you.
+
+56
+00:02:39,447 --> 00:02:42,542
+So, hopefully now you're ready to go.
+
+57
+00:02:42,542 --> 00:02:44,667
+Sit down, get that drink,
+
+58
+00:02:44,667 --> 00:02:48,188
+get as excited as I am about this class,
+
+59
+00:02:48,188 --> 00:02:52,432
+and hopefully at the end of
+the day you see the beauty
+
+60
+00:02:52,432 --> 00:02:56,349
+that this programming
+language, Go, really has.
+
